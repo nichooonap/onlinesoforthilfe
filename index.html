@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F7F4EE">
+
+  <title>Soforthilfe — Digitale Lösungen für lokale Unternehmen</title>
+  <meta name="description" content="Soforthilfe liefert schnelle, erschwingliche digitale Lösungen für lokale Unternehmen. Website in 7 Tagen, Google Maps Eintrag. Jetzt anfragen.">
+  <link rel="canonical" href="https://soforthilfe.app/">
+
+  <meta property="og:title" content="Soforthilfe — Digitale Lösungen für lokale Unternehmen">
+  <meta property="og:description" content="Website, Google Maps, Online-Sichtbarkeit. Schnell, erschwinglich, ohne Aufwand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soforthilfe.app/">
+  <meta property="og:locale" content="de_DE">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23C8291F'/><text y='22' x='7' font-size='18' fill='%23F7F4EE' font-family='sans-serif' font-weight='800'>S</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=dm-sans:300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Soforthilfe",
+    "url": "https://soforthilfe.app",
+    "description": "Soforthilfe bietet schnelle digitale Lösungen für lokale Unternehmen in Deutschland.",
+    "areaServed": { "@type": "Country", "name": "Germany" }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #F7F4EE;
+      --dark:   #0D0C0B;
+      --text:   #0D0C0B;
+      --muted:  #7A7772;
+      --muted2: #B0ADA6;
+      --accent: #C8291F;
+      --line:   rgba(13,12,11,.09);
+      --line-d: rgba(236,234,229,.08);
+      --font:   'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+
+    /* ── Cookie ── */
+    #cookie-banner {
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      width: calc(100% - 40px); max-width: 560px;
+      background: var(--dark); color: rgba(236,234,229,.75);
+      border-radius: 10px; padding: 14px 18px;
+      display: flex; align-items: center; gap: 14px;
+      z-index: 9999; font-size: 13px; font-weight: 300;
+      box-shadow: 0 8px 40px rgba(0,0,0,.2);
+    }
+    #cookie-banner p { flex: 1; line-height: 1.5; }
+    #cookie-banner a { color: rgba(236,234,229,.5); }
+    #cookie-accept {
+      flex-shrink: 0; background: var(--accent); color: #F7F4EE;
+      border: none; border-radius: 6px; padding: 7px 14px;
+      font-family: var(--font); font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .hidden { display: none !important; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,244,238,.93);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; height: 60px;
+    }
+    .logo {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: -0.02em; color: var(--text); text-decoration: none;
+    }
+    .logo b { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 400; color: var(--muted);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .btn-nav {
+      font-family: var(--font); font-size: 13px; font-weight: 700;
+      color: #F7F4EE; background: var(--accent);
+      text-decoration: none; padding: 9px 18px;
+      border: none; cursor: pointer; transition: opacity .2s;
+    }
+    .btn-nav:hover { opacity: .85; }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: calc(90vh - 60px);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 72px;
+    }
+    h1 {
+      font-size: clamp(56px, 9.5vw, 116px);
+      font-weight: 700; line-height: 1.0;
+      letter-spacing: -0.035em;
+      color: var(--text);
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+
+    .hero-lower {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; gap: 48px;
+      padding: 56px 0 64px;
+      flex-wrap: wrap;
+    }
+    .hero-tagline {
+      font-size: 16px; font-weight: 300; color: var(--muted);
+      line-height: 1.75; max-width: 380px;
+    }
+    .btn-primary {
+      font-family: var(--font); font-size: 14px; font-weight: 700;
+      color: #F7F4EE; background: var(--accent);
+      text-decoration: none; padding: 14px 28px;
+      border: none; cursor: pointer; transition: opacity .2s;
+      display: inline-block; flex-shrink: 0; align-self: flex-end;
+    }
+    .btn-primary:hover { opacity: .85; }
+
+
+    /* ── Products ── */
+    #produkte {
+      padding: 88px 0 80px;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-head {
+      margin-bottom: 48px;
+    }
+    .section-tag {
+      font-size: 11px; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted2);
+      display: block; margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(22px, 2.8vw, 34px); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+
+    /* Product rows — the signature element of this page */
+    .prod-row {
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      align-items: center;
+      gap: 40px;
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: padding .2s;
+    }
+    .prod-row:last-child { border-bottom: 1px solid var(--line); }
+    .prod-row.active:hover { padding-left: 16px; }
+    .prod-row.active:hover .prod-code { color: var(--accent); }
+    .prod-row.active:hover .prod-arrow { opacity: 1; transform: translateX(0); }
+
+    .prod-code {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted2);
+      transition: color .2s;
+      padding-top: 2px;
+    }
+    .prod-body {}
+    .prod-name {
+      font-size: clamp(17px, 2vw, 21px); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 5px;
+    }
+    .prod-desc {
+      font-size: 14px; font-weight: 300;
+      color: var(--muted); line-height: 1.6;
+    }
+    .prod-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 6px; flex-shrink: 0;
+    }
+    .prod-price {
+      font-size: 28px; font-weight: 700;
+      letter-spacing: -0.035em; line-height: 1;
+      white-space: nowrap;
+    }
+    .prod-price-note {
+      font-size: 11px; font-weight: 300;
+      color: var(--muted2); white-space: nowrap;
+    }
+    .prod-arrow {
+      font-size: 13px; font-weight: 700;
+      color: var(--accent); white-space: nowrap;
+      opacity: 0; transform: translateX(-8px);
+      transition: opacity .2s, transform .2s;
+    }
+
+    .prod-row.soon {
+      pointer-events: none; opacity: .25;
+      cursor: default;
+    }
+    .prod-soon-tag {
+      font-size: 9px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted2);
+      border: 1px solid var(--line);
+      padding: 3px 7px; display: inline-block; margin-bottom: 6px;
+    }
+
+    @media (max-width: 640px) {
+      .prod-row { grid-template-columns: 1fr; gap: 14px; }
+      .prod-code { display: none; }
+      .prod-right { align-items: flex-start; flex-direction: row; align-items: center; gap: 20px; }
+      .prod-arrow { display: none; }
+    }
+
+    /* ── Why ── */
+    #ueber {
+      background: var(--dark);
+      padding: 96px 0;
+      border-bottom: 1px solid rgba(236,234,229,.07);
+    }
+    .manifesto {
+      font-size: clamp(36px, 5.5vw, 72px);
+      font-weight: 700; line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #ECEAE5;
+      margin-bottom: 72px;
+      max-width: 800px;
+    }
+    .manifesto em { font-style: normal; color: var(--accent); }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line-d);
+    }
+    .principle {
+      padding: 36px 48px 36px 0;
+      border-right: 1px solid var(--line-d);
+    }
+    .principle:last-child { border-right: none; padding-right: 0; padding-left: 48px; }
+    .principle:nth-child(2) { padding: 36px 48px; }
+
+    .p-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 14px; display: block;
+    }
+    .principle h3 {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: -0.01em; color: #ECEAE5;
+      margin-bottom: 8px; line-height: 1.25;
+    }
+    .principle p {
+      font-size: 14px; font-weight: 300;
+      color: rgba(236,234,229,.4); line-height: 1.75;
+    }
+    @media (max-width: 760px) {
+      .principles { grid-template-columns: 1fr; }
+      .principle,
+      .principle:nth-child(2),
+      .principle:last-child {
+        padding: 28px 0; border-right: none;
+        border-bottom: 1px solid var(--line-d);
+      }
+      .principle:last-child { border-bottom: none; }
+    }
+
+    /* ── Contact ── */
+    #kontakt { padding: 96px 0; }
+    .kontakt-inner { max-width: 560px; margin: 0 auto; }
+    .kontakt-head { margin-bottom: 48px; text-align: center; }
+    .kontakt-head h2 { margin-bottom: 12px; }
+    .kontakt-head p {
+      font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.75;
+    }
+
+    .cta-form { display: flex; flex-direction: column; gap: 10px; }
+    .form-row { display: flex; gap: 10px; }
+    .f-input {
+      width: 100%; padding: 13px 16px;
+      font-family: var(--font); font-size: 14px; font-weight: 300;
+      border: 1px solid var(--line); background: transparent;
+      color: var(--text); outline: none; border-radius: 0;
+      transition: border-color .2s; -webkit-appearance: none;
+    }
+    .f-input::placeholder { color: var(--muted2); }
+    .f-input:focus { border-color: var(--accent); }
+    .f-label {
+      font-size: 12px; font-weight: 400; color: var(--muted2);
+      letter-spacing: .04em;
+    }
+    .f-multiselect {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .f-chip {
+      display: flex; align-items: center; gap: 8px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      font-family: var(--font); font-size: 13px; font-weight: 400;
+      color: var(--muted); cursor: pointer;
+      transition: border-color .2s, color .2s, background .2s;
+      user-select: none;
+    }
+    .f-chip input[type=checkbox] { display: none; }
+    .f-chip:hover { border-color: rgba(13,12,11,.25); color: var(--text); }
+    .f-chip.selected {
+      border-color: var(--accent); color: var(--accent);
+      background: rgba(200,41,31,.05);
+    }
+    .f-check {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 12px; font-weight: 300; color: var(--muted);
+      cursor: pointer; line-height: 1.55;
+    }
+    .f-check input[type=checkbox] {
+      margin-top: 2px; flex-shrink: 0;
+      accent-color: var(--accent); width: 14px; height: 14px;
+    }
+    .f-check a { color: var(--muted); }
+    .f-submit {
+      width: 100%; padding: 14px; background: var(--accent); color: #F7F4EE;
+      border: none; font-family: var(--font); font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: opacity .2s;
+    }
+    .f-submit:hover { opacity: .85; }
+    #form-success {
+      display: none; padding: 40px 28px; max-width: 560px;
+      border: 1px solid var(--line); text-align: center;
+    }
+    #form-success .check { font-size: 36px; color: var(--accent); margin-bottom: 12px; }
+    #form-success strong { display: block; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+    #form-success p { font-size: 14px; font-weight: 300; color: var(--muted); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(236,234,229,.07);
+      padding: 24px 0;
+    }
+    .foot-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+      font-size: 12px; font-weight: 300; color: rgba(236,234,229,.25);
+    }
+    footer a { color: rgba(236,234,229,.25); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: rgba(236,234,229,.6); }
+    .foot-links { display: flex; gap: 24px; }
+
+    /* ── Reveal ── */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<div id="cookie-banner">
+  <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Kein Tracking. <a href="/datenschutz.html">Datenschutz</a></p>
+  <button id="cookie-accept">OK</button>
+</div>
+
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a class="logo" href="/">soforthilfe<b>.</b></a>
+      <ul class="nav-links">
+        <li><a href="#produkte">Produkte</a></li>
+        <li><a href="#ueber">Warum wir</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="btn-nav">Anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO: poster layout — headline top, tagline+CTA bottom, stats below -->
+  <section id="hero">
+    <div class="container hero-body">
+      <div class="hero-title">
+        <h1>Was Ihrem<br>Unternehmen<br>online fehlt —<br><em>wir liefern es.</em></h1>
+      </div>
+      <div class="hero-lower">
+        <p class="hero-tagline">Fertige digitale Lösungen für lokale Unternehmen. Kein Agentur-Projekt, kein langer Vorlauf. Fertig in Tagen, zu festen Preisen.</p>
+        <a href="#produkte" class="btn-primary">Produkte ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS: horizontal list rows -->
+  <section id="produkte">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Produkte</span>
+        <h2>Was wir liefern.</h2>
+      </div>
+
+      <a class="prod-row active reveal" href="https://website.soforthilfe.app">
+        <span class="prod-code">WEB</span>
+        <div class="prod-body">
+          <div class="prod-name">Website in 7 Tagen</div>
+          <div class="prod-desc">Mobil-optimierter Onepager, individuell gestaltet, SEO-ready. Einschließlich Hosting und Domain.</div>
+        </div>
+        <div class="prod-right">
+          <span class="prod-price">499 €</span>
+          <span class="prod-price-note">einmalig + 29 €/Monat</span>
+          <span class="prod-arrow">Zur Leistung →</span>
+        </div>
+      </a>
+
+      <a class="prod-row active reveal" href="https://maps.soforthilfe.app" style="transition-delay:.08s">
+        <span class="prod-code">MAPS</span>
+        <div class="prod-body">
+          <div class="prod-name">Google Business Profil einrichten</div>
+          <div class="prod-desc">Ihr Unternehmen bei Google Maps sichtbar machen. Einrichtung des Google Business Profils, einmalig.</div>
+        </div>
+        <div class="prod-right">
+          <span class="prod-price">99 €</span>
+          <span class="prod-price-note">einmalig, kein Abo</span>
+          <span class="prod-arrow">Zur Leistung →</span>
+        </div>
+      </a>
+
+      <div class="prod-row soon reveal" style="transition-delay:.16s">
+        <span class="prod-code">SOON</span>
+        <div class="prod-body">
+          <div class="prod-soon-tag">Demnächst</div>
+          <div class="prod-name">Weiteres Produkt</div>
+          <div class="prod-desc">In Vorbereitung.</div>
+        </div>
+        <div class="prod-right">
+          <span class="prod-price" style="font-size:20px;color:var(--muted2)">—</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY: dark, editorial — manifesto + 3 principles -->
+  <section id="ueber">
+    <div class="container">
+      <p class="manifesto reveal">
+        Kein Stundenhonorar.<br>
+        Kein langer Vorlauf.<br>
+        <em>Kein Aufwand für Sie.</em>
+      </p>
+      <div class="principles">
+        <div class="principle reveal">
+          <span class="p-tag">01</span>
+          <h3>Fertig in Tagen, nicht Monaten</h3>
+          <p>Klassische Agenturen brauchen Wochen für ein Erstgespräch. Soforthilfe liefert, bevor andere anfangen.</p>
+        </div>
+        <div class="principle reveal" style="transition-delay:.08s">
+          <span class="p-tag">02</span>
+          <h3>Fester Preis, keine Überraschungen</h3>
+          <p>Kein Stundensatz, kein Angebot das sich dreimal ändert. Ein Preis, eine Leistung, fertig.</p>
+        </div>
+        <div class="principle reveal" style="transition-delay:.16s">
+          <span class="p-tag">03</span>
+          <h3>Kein technisches Vorwissen nötig</h3>
+          <p>Sie liefern Ihre Inhalte. Den Rest übernehmen wir. Kein Login-Chaos, kein Tool-Dschungel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT: clean, no sidebar clutter -->
+  <section id="kontakt">
+    <div class="container">
+      <div class="kontakt-inner">
+      <div class="kontakt-head reveal">
+        <h2>Jetzt anfragen.</h2>
+        <p>Kein Aufwand. Schreiben Sie kurz worum es geht — wir melden uns innerhalb von 24 Stunden.</p>
+      </div>
+      <div class="reveal" style="transition-delay:.06s">
+        <form class="cta-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <input class="f-input" type="text" name="name" placeholder="Ihr Name" required autocomplete="name">
+            <input class="f-input" type="text" name="company" placeholder="Unternehmen" autocomplete="organization">
+          </div>
+          <input class="f-input" type="email" name="email" placeholder="E-Mail-Adresse" required autocomplete="email">
+          <p class="f-label">Worum geht es?</p>
+          <div class="f-multiselect" role="group" aria-label="Worum geht es?">
+            <label class="f-chip">
+              <input type="checkbox" name="interest" value="website">
+              Website
+            </label>
+            <label class="f-chip">
+              <input type="checkbox" name="interest" value="maps">
+              Google Maps
+            </label>
+            <label class="f-chip">
+              <input type="checkbox" name="interest" value="anderes">
+              Etwas anderes
+            </label>
+          </div>
+          <label class="f-check">
+            <input type="checkbox" name="privacy" required>
+            <span>Ich habe die <a href="/datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.</span>
+          </label>
+          <button class="f-submit" type="submit">Kostenlos anfragen</button>
+        </form>
+        <div id="form-success">
+          <div class="check">✓</div>
+          <strong>Danke, wir melden uns!</strong>
+          <p>Wir melden uns innerhalb von 24 Stunden.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-inner">
+      <span>&copy; 2026 Soforthilfe</span>
+      <div class="foot-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var b = document.getElementById('cookie-banner');
+    if (localStorage.getItem('sf-ok')) b.classList.add('hidden');
+    document.getElementById('cookie-accept').onclick = function() {
+      b.classList.add('hidden'); localStorage.setItem('sf-ok','1');
+    };
+  })();
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 68, behavior: 'smooth' }); }
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('in'); });
+  }
+
+  document.querySelectorAll('.f-chip').forEach(function(chip) {
+    chip.addEventListener('change', function() {
+      chip.classList.toggle('selected', chip.querySelector('input').checked);
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!this.querySelector('[name=privacy]').checked || !this.querySelector('[name=email]').value) return;
+    this.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  });
+</script>
+</body>
+</html>

@@ -89,6 +89,9 @@
     #cookie-banner a { color: rgba(236,234,229,.5); }
     #cookie-accept { flex-shrink: 0; background: var(--accent); color: #F7F4EE; border: none; border-radius: 6px; padding: 7px 14px; font-family: var(--font); font-size: 13px; font-weight: 700; cursor: pointer; transition: opacity .2s; }
     #cookie-accept:hover { opacity: .85; }
+    #cookie-btns { display: flex; gap: 8px; flex-shrink: 0; }
+    #cookie-decline { background: transparent; color: rgba(236,234,229,.55); border: 1px solid rgba(236,234,229,.2); border-radius: 6px; padding: 7px 12px; font-family: var(--font); font-size: 12px; font-weight: 400; cursor: pointer; white-space: nowrap; transition: border-color .2s, color .2s; }
+    #cookie-decline:hover { border-color: rgba(236,234,229,.4); color: rgba(236,234,229,.75); }
     .hidden { display: none !important; }
 
     nav { position: sticky; top: 0; z-index: 100; background: rgba(247,244,238,.93); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
@@ -229,8 +232,11 @@
 <body>
 
 <div id="cookie-banner">
-  <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Kein Tracking. <a href="https://onlinesoforthilfe.de/datenschutz.html">Datenschutz</a></p>
-  <button id="cookie-accept">OK</button>
+  <p>Wir nutzen Google Analytics, um unsere Website zu verbessern. <a href="https://onlinesoforthilfe.de/datenschutz.html">Datenschutz</a></p>
+  <div id="cookie-btns">
+    <button id="cookie-decline">Nur notwendige</button>
+    <button id="cookie-accept">Alle akzeptieren</button>
+  </div>
 </div>
 
 <nav>
@@ -524,6 +530,7 @@
         <a href="https://onlinesoforthilfe.de/datenschutz.html">Datenschutz</a>
         <a href="https://onlinesoforthilfe.de/agb.html">AGB</a>
         <a href="https://onlinesoforthilfe.de/widerruf.html">Widerruf</a>
+        <a href="#" id="cookie-settings-btn">Cookie-Einstellungen</a>
       </div>
     </div>
   </div>
@@ -531,11 +538,38 @@
 
 <script>
   (function() {
-    var b = document.getElementById('cookie-banner');
-    if (localStorage.getItem('sf-ok')) b.classList.add('hidden');
+(function() {
+    var GA_ID = 'G-DYRWZERCKV';
+    function loadGA() {
+      if (document.getElementById('ga-scr')) return;
+      var s = document.createElement('script');
+      s.id = 'ga-scr'; s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID);
+    }
+    var stored = localStorage.getItem('sf-consent');
+    if (stored === 'all') loadGA();
+    var banner = document.getElementById('cookie-banner');
+    if (stored) banner.classList.add('hidden');
     document.getElementById('cookie-accept').onclick = function() {
-      b.classList.add('hidden'); localStorage.setItem('sf-ok','1');
+      localStorage.setItem('sf-consent', 'all');
+      banner.classList.add('hidden'); loadGA();
     };
+    document.getElementById('cookie-decline').onclick = function() {
+      localStorage.setItem('sf-consent', 'necessary');
+      banner.classList.add('hidden');
+    };
+    var sb = document.getElementById('cookie-settings-btn');
+    if (sb) sb.onclick = function(e) {
+      e.preventDefault();
+      localStorage.removeItem('sf-consent');
+      banner.classList.remove('hidden');
+    };
+  })();
   })();
   document.querySelectorAll('.faq-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {

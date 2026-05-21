@@ -112,9 +112,24 @@
     footer a { color: rgba(236,234,229,.25); text-decoration: none; transition: color .2s; }
     footer a:hover { color: rgba(236,234,229,.6); }
     .foot-links { display: flex; gap: 24px; }
+    #cookie-banner { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 40px); max-width: 560px; background: var(--dark); color: rgba(236,234,229,.75); border-radius: 10px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; z-index: 9999; font-size: 13px; font-weight: 300; box-shadow: 0 8px 40px rgba(0,0,0,.2); }
+    #cookie-banner p { flex: 1; line-height: 1.5; }
+    #cookie-banner a { color: rgba(236,234,229,.5); }
+    #cookie-btns { display: flex; gap: 8px; flex-shrink: 0; }
+    #cookie-accept { background: var(--accent); color: #F7F4EE; border: none; border-radius: 6px; padding: 7px 14px; font-family: var(--font); font-size: 13px; font-weight: 700; cursor: pointer; }
+    #cookie-accept:hover { opacity: .85; }
+    #cookie-decline { background: transparent; color: rgba(236,234,229,.55); border: 1px solid rgba(236,234,229,.2); border-radius: 6px; padding: 7px 12px; font-family: var(--font); font-size: 12px; font-weight: 400; cursor: pointer; white-space: nowrap; }
+    #cookie-decline:hover { border-color: rgba(236,234,229,.4); color: rgba(236,234,229,.75); }
+    .hidden { display: none !important; }
   </style>
 </head>
-<body>
+<div id="cookie-banner">
+  <p>Wir nutzen Google Analytics, um unsere Website zu verbessern. <a href="/datenschutz.html">Datenschutz</a></p>
+  <div id="cookie-btns">
+    <button id="cookie-decline">Nur notwendige</button>
+    <button id="cookie-accept">Alle akzeptieren</button>
+  </div>
+</div>
 
 <nav>
   <div class="container" style="max-width:1080px">
@@ -264,10 +279,46 @@
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="/agb.html">AGB</a>
         <a href="/widerruf.html">Widerruf</a>
+        <a href="#" id="cookie-settings-btn">Cookie-Einstellungen</a>
       </div>
     </div>
   </div>
 </footer>
 
+
+<script>
+  (function() {
+    var GA_ID = 'G-DYRWZERCKV';
+    function loadGA() {
+      if (document.getElementById('ga-scr')) return;
+      var s = document.createElement('script');
+      s.id = 'ga-scr'; s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID);
+    }
+    var stored = localStorage.getItem('sf-consent');
+    if (stored === 'all') loadGA();
+    var banner = document.getElementById('cookie-banner');
+    if (stored) banner.classList.add('hidden');
+    document.getElementById('cookie-accept').onclick = function() {
+      localStorage.setItem('sf-consent', 'all');
+      banner.classList.add('hidden'); loadGA();
+    };
+    document.getElementById('cookie-decline').onclick = function() {
+      localStorage.setItem('sf-consent', 'necessary');
+      banner.classList.add('hidden');
+    };
+    var sb = document.getElementById('cookie-settings-btn');
+    if (sb) sb.onclick = function(e) {
+      e.preventDefault();
+      localStorage.removeItem('sf-consent');
+      banner.classList.remove('hidden');
+    };
+  })();
+</script>
 </body>
 </html>

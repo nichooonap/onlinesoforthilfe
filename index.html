@@ -385,8 +385,11 @@
 <body>
 
 <div id="cookie-banner">
-  <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Kein Tracking. <a href="/datenschutz.html">Datenschutz</a> · <a href="/agb.html">AGB</a></p>
-  <button id="cookie-accept">OK</button>
+  <p>Wir nutzen Google Analytics, um unsere Website zu verbessern. <a href="/datenschutz.html">Datenschutz</a></p>
+  <div id="cookie-btns">
+    <button id="cookie-decline">Nur notwendige</button>
+    <button id="cookie-accept">Alle akzeptieren</button>
+  </div>
 </div>
 
 <nav>
@@ -612,6 +615,7 @@
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="/agb.html">AGB</a>
         <a href="/widerruf.html">Widerruf</a>
+        <a href="#" id="cookie-settings-btn">Cookie-Einstellungen</a>
       </div>
     </div>
   </div>
@@ -619,11 +623,38 @@
 
 <script>
   (function() {
-    var b = document.getElementById('cookie-banner');
-    if (localStorage.getItem('sf-ok')) b.classList.add('hidden');
+(function() {
+    var GA_ID = 'G-DYRWZERCKV';
+    function loadGA() {
+      if (document.getElementById('ga-scr')) return;
+      var s = document.createElement('script');
+      s.id = 'ga-scr'; s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID);
+    }
+    var stored = localStorage.getItem('sf-consent');
+    if (stored === 'all') loadGA();
+    var banner = document.getElementById('cookie-banner');
+    if (stored) banner.classList.add('hidden');
     document.getElementById('cookie-accept').onclick = function() {
-      b.classList.add('hidden'); localStorage.setItem('sf-ok','1');
+      localStorage.setItem('sf-consent', 'all');
+      banner.classList.add('hidden'); loadGA();
     };
+    document.getElementById('cookie-decline').onclick = function() {
+      localStorage.setItem('sf-consent', 'necessary');
+      banner.classList.add('hidden');
+    };
+    var sb = document.getElementById('cookie-settings-btn');
+    if (sb) sb.onclick = function(e) {
+      e.preventDefault();
+      localStorage.removeItem('sf-consent');
+      banner.classList.remove('hidden');
+    };
+  })();
   })();
 
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {

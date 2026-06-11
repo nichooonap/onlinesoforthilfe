@@ -6,12 +6,12 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#F7F4EE">
 
-  <title>Soforthilfe — Digitale Lösungen für lokale Unternehmen</title>
-  <meta name="description" content="Soforthilfe liefert schnelle, erschwingliche digitale Lösungen für lokale Unternehmen. Website in 7 Tagen, Google Maps Eintrag. Jetzt anfragen.">
+  <title>Soforthilfe | Website und Sichtbarkeit für lokale Unternehmen zum Festpreis</title>
+  <meta name="description" content="Zwei Festpreis-Pakete für lokale Unternehmen: Website Starter (749 €) und Online gefunden werden (599 €). Fertig in Tagen, kein Agentur-Projekt. Jetzt anfragen.">
   <link rel="canonical" href="https://onlinesoforthilfe.de/">
 
-  <meta property="og:title" content="Soforthilfe — Digitale Lösungen für lokale Unternehmen">
-  <meta property="og:description" content="Website, Google Maps, Online-Sichtbarkeit. Schnell, erschwinglich, ohne Aufwand.">
+  <meta property="og:title" content="Soforthilfe | Website und Sichtbarkeit für lokale Unternehmen zum Festpreis">
+  <meta property="og:description" content="Website Starter und Online gefunden werden: zwei Pakete, feste Preise, fertig in Tagen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onlinesoforthilfe.de/">
   <meta property="og:locale" content="de_DE">
@@ -27,7 +27,7 @@
     "@type": "Organization",
     "name": "Soforthilfe",
     "url": "https://onlinesoforthilfe.de",
-    "description": "Soforthilfe bietet schnelle digitale Lösungen für lokale Unternehmen in Deutschland.",
+    "description": "Soforthilfe bietet zwei Festpreis-Pakete für lokale Unternehmen in Deutschland: Website Starter und Online gefunden werden.",
     "areaServed": { "@type": "Country", "name": "Germany" }
   }
   </script>
@@ -135,8 +135,8 @@
     .btn-primary:hover { opacity: .85; }
 
 
-    /* ── Products ── */
-    #produkte {
+    /* ── Pakete ── */
+    #pakete {
       padding: 88px 0 80px;
       border-bottom: 1px solid var(--line);
     }
@@ -153,75 +153,63 @@
       letter-spacing: -0.02em; line-height: 1.1;
     }
 
-    /* Product rows — the signature element of this page */
-    .prod-row {
+    /* Paket cards — the signature element of this page */
+    .paket-grid {
       display: grid;
-      grid-template-columns: 72px 1fr auto;
-      align-items: center;
-      gap: 40px;
-      padding: 32px 0;
-      border-top: 1px solid var(--line);
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      transition: padding .2s;
-    }
-    .prod-row:last-child { border-bottom: 1px solid var(--line); }
-    .prod-row.active:hover { padding-left: 16px; }
-    .prod-row.active:hover .prod-code { color: var(--accent); }
-    .prod-row.active:hover .prod-arrow { opacity: 1; transform: translateX(0); }
-
-    .prod-code {
-      font-size: 10px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--muted2);
-      transition: color .2s;
-      padding-top: 2px;
-    }
-    .prod-body {}
-    .prod-name {
-      font-size: clamp(17px, 2vw, 21px); font-weight: 700;
-      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 5px;
-    }
-    .prod-desc {
-      font-size: 14px; font-weight: 300;
-      color: var(--muted); line-height: 1.6;
-    }
-    .prod-right {
-      display: flex; flex-direction: column;
-      align-items: flex-end; gap: 6px; flex-shrink: 0;
-    }
-    .prod-price {
-      font-size: 28px; font-weight: 700;
-      letter-spacing: -0.035em; line-height: 1;
-      white-space: nowrap;
-    }
-    .prod-price-note {
-      font-size: 11px; font-weight: 300;
-      color: var(--muted2); white-space: nowrap;
-    }
-    .prod-arrow {
-      font-size: 13px; font-weight: 700;
-      color: var(--accent); white-space: nowrap;
-      opacity: 0; transform: translateX(-8px);
-      transition: opacity .2s, transform .2s;
-    }
-
-    .prod-row.soon {
-      pointer-events: none; opacity: .25;
-      cursor: default;
-    }
-    .prod-soon-tag {
-      font-size: 9px; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--muted2);
+      grid-template-columns: 1fr 1fr;
       border: 1px solid var(--line);
-      padding: 3px 7px; display: inline-block; margin-bottom: 6px;
+    }
+    .paket {
+      padding: 44px 40px;
+      display: flex; flex-direction: column; gap: 28px;
+    }
+    .paket + .paket { border-left: 1px solid var(--line); }
+
+    .paket-code {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent);
+      display: block; margin-bottom: 14px;
+    }
+    .paket-name {
+      font-size: clamp(20px, 2.4vw, 27px); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 8px;
+    }
+    .paket-for {
+      font-size: 14px; font-weight: 300;
+      color: var(--muted); line-height: 1.65;
+    }
+    .paket-list { list-style: none; flex: 1; }
+    .paket-list li {
+      font-size: 14px; font-weight: 300; color: var(--text);
+      line-height: 1.6; padding: 12px 0 12px 26px;
+      border-top: 1px solid var(--line);
+      position: relative;
+    }
+    .paket-list li::before {
+      content: '→'; position: absolute; left: 0; top: 12px;
+      color: var(--accent); font-weight: 700; font-size: 13px;
+    }
+    .paket-addon {
+      font-size: 12px; font-weight: 300;
+      color: var(--muted2); line-height: 1.6;
+    }
+    .paket-foot {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    }
+    .paket-price {
+      font-size: 36px; font-weight: 700;
+      letter-spacing: -0.035em; line-height: 1; display: block;
+    }
+    .paket-price-note {
+      font-size: 11px; font-weight: 300;
+      color: var(--muted2); display: block; margin-top: 7px;
     }
 
-    @media (max-width: 640px) {
-      .prod-row { grid-template-columns: 1fr; gap: 14px; }
-      .prod-code { display: none; }
-      .prod-right { align-items: flex-start; flex-direction: row; align-items: center; gap: 20px; }
-      .prod-arrow { display: none; }
+    @media (max-width: 760px) {
+      .paket-grid { grid-template-columns: 1fr; }
+      .paket + .paket { border-left: none; border-top: 1px solid var(--line); }
+      .paket { padding: 30px 24px; }
     }
 
     /* ── Why ── */
@@ -392,14 +380,12 @@
 </head>
 <body>
 
-</div>
-
 <nav>
   <div class="container">
     <div class="nav-inner">
       <a class="logo" href="/">soforthilfe<b>.</b></a>
       <ul class="nav-links">
-        <li><a href="#produkte">Produkte</a></li>
+        <li><a href="#pakete">Pakete</a></li>
         <li><a href="#ueber">Warum wir</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -414,101 +400,69 @@
   <section id="hero">
     <div class="container hero-body">
       <div class="hero-title">
-        <h1>Was Ihrem<br>Unternehmen<br>online fehlt —<br><em>wir liefern es.</em></h1>
+        <h1>Was Ihrem<br>Unternehmen<br>online fehlt:<br><em>wir liefern es.</em></h1>
       </div>
       <div class="hero-lower">
-        <p class="hero-tagline">Fertige digitale Lösungen für lokale Unternehmen. Kein Agentur-Projekt, kein langer Vorlauf. Fertig in Tagen, zu festen Preisen.</p>
-        <a href="#produkte" class="btn-primary">Produkte ansehen</a>
+        <p class="hero-tagline">Zwei Pakete, feste Preise, fertig in Tagen. Website Starter, wenn Sie noch keine Website haben. Online gefunden werden, wenn Sie eine haben und keiner sie findet.</p>
+        <a href="#pakete" class="btn-primary">Pakete ansehen</a>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTS: horizontal list rows -->
-  <section id="produkte">
+  <!-- PAKETE: two package cards -->
+  <section id="pakete">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Produkte</span>
-        <h2>Was wir liefern.</h2>
+        <span class="section-tag">Pakete</span>
+        <h2>Zwei Pakete. Feste Preise.</h2>
       </div>
 
-      <a class="prod-row active reveal" href="https://website.onlinesoforthilfe.de">
-        <span class="prod-code">WEB</span>
-        <div class="prod-body">
-          <div class="prod-name">Website in 7 Tagen</div>
-          <div class="prod-desc">Mobil-optimierter Onepager, individuell gestaltet, SEO-ready. Einschließlich Hosting und Domain.</div>
-        </div>
-        <div class="prod-right">
-          <span class="prod-price">699 €</span>
-          <span class="prod-price-note">einmalig + 29 €/Monat</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
+      <div class="paket-grid">
 
-      <a class="prod-row active reveal" href="https://maps.onlinesoforthilfe.de" style="transition-delay:.08s">
-        <span class="prod-code">MAPS</span>
-        <div class="prod-body">
-          <div class="prod-name">Google Business Profil einrichten</div>
-          <div class="prod-desc">Ihr Unternehmen bei Google Maps sichtbar machen. Einrichtung des Google Business Profils, einmalig.</div>
+        <div class="paket reveal">
+          <div>
+            <span class="paket-code">Paket 01</span>
+            <h3 class="paket-name">Website Starter</h3>
+            <p class="paket-for">Für Betriebe, die noch keine Website haben und online endlich stattfinden wollen.</p>
+          </div>
+          <ul class="paket-list">
+            <li>Mobil-optimierter Onepager, individuell gestaltet, in 7 Tagen online</li>
+            <li>Hosting und Domain inklusive</li>
+            <li>Google Business Profil: Ihr Betrieb erscheint auf Google Maps</li>
+            <li>Impressum, Datenschutz und Cookie-Banner fertig eingerichtet</li>
+          </ul>
+          <div class="paket-foot">
+            <div>
+              <span class="paket-price">749 €</span>
+              <span class="paket-price-note">einmalig + 29 €/Monat für Hosting und Domain</span>
+            </div>
+            <a href="#kontakt" class="btn-primary">Paket anfragen</a>
+          </div>
         </div>
-        <div class="prod-right">
-          <span class="prod-price">99 €</span>
-          <span class="prod-price-note">einmalig, kein Abo</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
 
-      <a class="prod-row active reveal" href="https://seo.onlinesoforthilfe.de" style="transition-delay:.16s">
-        <span class="prod-code">SEO</span>
-        <div class="prod-body">
-          <div class="prod-name">SEO-Optimierung Ihrer Website</div>
-          <div class="prod-desc">Titel-Tags, Meta-Descriptions, H-Struktur, Schema-Markup — wir machen Ihre bestehende Seite Google-ready. Bis zu 5 Unterseiten.</div>
+        <div class="paket reveal" style="transition-delay:.08s">
+          <div>
+            <span class="paket-code">Paket 02</span>
+            <h3 class="paket-name">Online gefunden werden</h3>
+            <p class="paket-for">Für Betriebe mit Website, die bei Google und in KI-Suchen trotzdem nicht auftauchen.</p>
+          </div>
+          <ul class="paket-list">
+            <li>Google Business Profil einrichten oder optimieren</li>
+            <li>SEO-Optimierung Ihrer Website: Titel, Beschreibungen, Struktur, Schema-Markup (bis zu 5 Unterseiten)</li>
+            <li>Keyword-Recherche: 30 bis 50 Suchbegriffe mit priorisierter Umsetzungsliste</li>
+            <li>KI-Sichtbarkeit: ChatGPT, Perplexity und Google AI kennen Ihren Betrieb</li>
+          </ul>
+          <p class="paket-addon">Optional dazu: Google Ads Anschub-Kampagne, komplett eingerichtet, 399 € einmalig. Werbebudget separat.</p>
+          <div class="paket-foot">
+            <div>
+              <span class="paket-price">599 €</span>
+              <span class="paket-price-note">einmalig, kein Abo</span>
+            </div>
+            <a href="#kontakt" class="btn-primary">Paket anfragen</a>
+          </div>
         </div>
-        <div class="prod-right">
-          <span class="prod-price">199 €</span>
-          <span class="prod-price-note">einmalig, kein Abo</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
 
-      <a class="prod-row active reveal" href="https://keywords.onlinesoforthilfe.de" style="transition-delay:.24s">
-        <span class="prod-code">KWD</span>
-        <div class="prod-body">
-          <div class="prod-name">Keyword-Recherche</div>
-          <div class="prod-desc">30–50 relevante Keywords für Ihre Branche — mit Suchvolumen, Wettbewerb und priorisierter Umsetzungsliste. Ergebnis in 48h.</div>
-        </div>
-        <div class="prod-right">
-          <span class="prod-price">299 €</span>
-          <span class="prod-price-note">einmalig, kein Abo</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
-
-      <a class="prod-row active reveal" href="https://googleads.onlinesoforthilfe.de" style="transition-delay:.32s">
-        <span class="prod-code">ADS</span>
-        <div class="prod-body">
-          <div class="prod-name">Google Ads Kampagne einrichten</div>
-          <div class="prod-desc">Keywords, Anzeigentexte, Geotargeting und Conversion-Tracking — komplett eingerichtet in 5 Werktagen. Budget separat.</div>
-        </div>
-        <div class="prod-right">
-          <span class="prod-price">399 €</span>
-          <span class="prod-price-note">einmalig, kein Abo</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
-
-      <a class="prod-row active reveal" href="https://geo.onlinesoforthilfe.de" style="transition-delay:.40s">
-        <span class="prod-code">GEO</span>
-        <div class="prod-body">
-          <div class="prod-name">GEO — Von KI gefunden werden</div>
-          <div class="prod-desc">ChatGPT, Perplexity und Google AI sollen Ihr Unternehmen kennen. Wir optimieren Ihre Seite für KI-Sichtbarkeit. Bis zu 5 Unterseiten.</div>
-        </div>
-        <div class="prod-right">
-          <span class="prod-price">199 €</span>
-          <span class="prod-price-note">einmalig, kein Abo</span>
-          <span class="prod-arrow">Zur Leistung →</span>
-        </div>
-      </a>
-
+      </div>
     </div>
   </section>
 
@@ -546,7 +500,7 @@
       <div class="kontakt-inner">
       <div class="kontakt-head reveal">
         <h2>Jetzt anfragen.</h2>
-        <p>Kein Aufwand. Schreiben Sie kurz worum es geht — wir melden uns innerhalb von 24 Stunden.</p>
+        <p>Kein Aufwand. Schreiben Sie kurz worum es geht, wir melden uns innerhalb von 24 Stunden.</p>
       </div>
       <div class="reveal" style="transition-delay:.06s">
         <form class="cta-form" id="contact-form" novalidate>
@@ -558,28 +512,16 @@
           <p class="f-label">Worum geht es?</p>
           <div class="f-multiselect" role="group" aria-label="Worum geht es?">
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="website">
-              Website
+              <input type="checkbox" name="interest" value="website-starter">
+              Website Starter
             </label>
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="maps">
-              Google Maps
+              <input type="checkbox" name="interest" value="gefunden-werden">
+              Online gefunden werden
             </label>
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="keywords">
-              Keywords
-            </label>
-            <label class="f-chip">
-              <input type="checkbox" name="interest" value="googleads">
-              Google Ads
-            </label>
-            <label class="f-chip">
-              <input type="checkbox" name="interest" value="seo">
-              SEO
-            </label>
-            <label class="f-chip">
-              <input type="checkbox" name="interest" value="geo">
-              KI-Sichtbarkeit
+              <input type="checkbox" name="interest" value="google-ads-addon">
+              Google Ads Add-on
             </label>
             <label class="f-chip">
               <input type="checkbox" name="interest" value="anderes">
@@ -591,7 +533,7 @@
             <span>Ich habe die <a href="/datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.</span>
           </label>
             <input type="hidden" name="access_key" value="86debaab-1f2f-40b0-b04f-d0d688c9e788">
-            <input type="hidden" name="subject" value="Neue Anfrage — Soforthilfe">
+            <input type="hidden" name="subject" value="Neue Anfrage: Soforthilfe">
             <input type="hidden" name="from_name" value="Soforthilfe">
             <input type="hidden" name="redirect" value="false">
           <button class="f-submit" type="submit">Kostenlos anfragen</button>

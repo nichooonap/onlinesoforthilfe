@@ -4,3 +4,9 @@ legal/
 instagram/
 logo/
 *.pdf
+
+# nicho brand pipeline (lokale Arbeitsdateien, nicht deployen/versionieren)
+/brand/
+/content/
+/research/
+/CHECKLIST.md

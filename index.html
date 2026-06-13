@@ -6,12 +6,12 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#F7F4EE">
 
-  <title>Soforthilfe | Website und Sichtbarkeit für lokale Unternehmen zum Festpreis</title>
-  <meta name="description" content="Zwei Festpreis-Pakete für lokale Unternehmen: Website Starter (749 €) und Online gefunden werden (599 €). Fertig in Tagen, kein Agentur-Projekt. Jetzt anfragen.">
+  <title>Online gefunden werden zum Festpreis | Soforthilfe für lokale Betriebe</title>
+  <meta name="description" content="Ihr Betrieb wird bei Google nicht gefunden? Wir bauen Ihre Website, bringen Ihr Google-Profil in Ordnung und machen Sie sichtbar, auch in der KI-Suche. Fester Preis, fertig in Tagen, kein Agentur-Kram.">
   <link rel="canonical" href="https://onlinesoforthilfe.de/">
 
-  <meta property="og:title" content="Soforthilfe | Website und Sichtbarkeit für lokale Unternehmen zum Festpreis">
-  <meta property="og:description" content="Website Starter und Online gefunden werden: zwei Pakete, feste Preise, fertig in Tagen.">
+  <meta property="og:title" content="Online gefunden werden zum Festpreis | Soforthilfe">
+  <meta property="og:description" content="Website, Google-Profil und Sichtbarkeit für lokale Betriebe. Fester Preis, fertig in Tagen, kein Fachchinesisch.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onlinesoforthilfe.de/">
   <meta property="og:locale" content="de_DE">
@@ -24,11 +24,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     "name": "Soforthilfe",
     "url": "https://onlinesoforthilfe.de",
-    "description": "Soforthilfe bietet zwei Festpreis-Pakete für lokale Unternehmen in Deutschland: Website Starter und Online gefunden werden.",
-    "areaServed": { "@type": "Country", "name": "Germany" }
+    "description": "Soforthilfe hilft lokalen Betrieben in Deutschland, online gefunden zu werden: Website zum Festpreis, Google-Unternehmensprofil und Sichtbarkeit in Google- und KI-Suche.",
+    "areaServed": { "@type": "Country", "name": "Deutschland" },
+    "availableLanguage": "de",
+    "priceRange": "€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Festpreis-Pakete",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Google-Notfall", "description": "Google-Unternehmensprofil übernehmen, falsche Angaben korrigieren, Bewertungen in Ordnung bringen.", "price": "199", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Gefunden werden", "description": "Google-Unternehmensprofil optimieren, lokale Suchbegriffe, Sichtbarkeit in ChatGPT und KI-Suche.", "price": "599", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Website", "description": "Mobil-optimierte Website in 7 Tagen, bei Google eingetragen, rechtssicher.", "price": "749", "priceCurrency": "EUR" }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Warum wird mein Betrieb bei Google nicht gefunden?", "acceptedAnswer": { "@type": "Answer", "text": "Meistens fehlt ein gepflegtes Google-Unternehmensprofil, oder Ihre Website ist für Google nicht verständlich aufgebaut. Wir richten das Profil ein und sorgen dafür, dass Sie bei den richtigen Suchen in Ihrer Region auftauchen." } },
+      { "@type": "Question", "name": "Was kostet eine Website für einen kleinen Betrieb?", "acceptedAnswer": { "@type": "Answer", "text": "Bei uns 749 Euro einmalig für eine fertige, mobil-optimierte Website, plus 29 Euro im Monat für Server, Domain und Pflege. Monatlich kündbar, die Seite gehört Ihnen." } },
+      { "@type": "Question", "name": "Wie lange dauert es, bis meine Website online ist?", "acceptedAnswer": { "@type": "Answer", "text": "In der Regel 7 Tage. Sie liefern Ihre Inhalte, den Rest übernehmen wir." } },
+      { "@type": "Question", "name": "Ich habe eine Website, aber keiner findet sie. Was kann ich tun?", "acceptedAnswer": { "@type": "Answer", "text": "Dann fehlt die Sichtbarkeit. Wir optimieren Ihr Google-Profil und Ihre Website, recherchieren die passenden Suchbegriffe und sorgen dafür, dass Kunden Sie finden. Das Paket Gefunden werden kostet 599 Euro einmalig." } },
+      { "@type": "Question", "name": "Werde ich auch von ChatGPT und anderen KI-Suchen gefunden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Immer mehr Kunden fragen ChatGPT, Perplexity oder die KI-Antworten von Google nach einem Betrieb in ihrer Nähe. Wir sorgen dafür, dass diese Dienste Ihren Betrieb kennen und empfehlen." } },
+      { "@type": "Question", "name": "Bei Google stehen falsche Angaben über mich. Können Sie das korrigieren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist unser Google-Notfall, ab 199 Euro." } },
+      { "@type": "Question", "name": "Bindet mich ein Vertrag oder ein Abo?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, kein langer Vertrag. Unsere Pakete sind Festpreise. Beim Website-Paket kommt ein monatlicher Betrag für Server und Pflege dazu, der jederzeit kündbar ist. Die Website gehört immer Ihnen." } }
+    ]
   }
   </script>
 
@@ -85,17 +112,19 @@
     }
     .nav-links a:hover { color: var(--text); }
     .btn-nav {
+      display: inline-flex; align-items: center; gap: 7px;
       font-family: var(--font); font-size: 13px; font-weight: 700;
-      color: #F7F4EE; background: var(--accent);
-      text-decoration: none; padding: 9px 18px;
-      border: none; cursor: pointer; transition: opacity .2s;
+      color: #FFFFFF; background: #25D366;
+      text-decoration: none; padding: 9px 16px;
+      border: none; cursor: pointer; transition: background .2s;
     }
-    .btn-nav:hover { opacity: .85; }
+    .btn-nav:hover { background: #1FB959; }
+    .btn-nav svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
     @media (max-width: 600px) { .nav-links { display: none; } }
 
     /* ── Hero ── */
     #hero {
-      min-height: calc(90vh - 60px);
+      min-height: calc(68vh - 60px);
       border-bottom: 1px solid var(--line);
       display: flex;
       flex-direction: column;
@@ -108,7 +137,7 @@
       padding-top: 72px;
     }
     h1 {
-      font-size: clamp(32px, 9.5vw, 116px);
+      font-size: clamp(34px, 9vw, 108px);
       font-weight: 700; line-height: 1.0;
       letter-spacing: -0.035em;
       color: var(--text);
@@ -118,12 +147,12 @@
     .hero-lower {
       display: flex; align-items: flex-end;
       justify-content: space-between; gap: 48px;
-      padding: 56px 0 64px;
+      padding: 48px 0 60px;
       flex-wrap: wrap;
     }
     .hero-tagline {
       font-size: 16px; font-weight: 300; color: var(--muted);
-      line-height: 1.75; max-width: 380px;
+      line-height: 1.75; max-width: 440px;
     }
     .btn-primary {
       font-family: var(--font); font-size: 14px; font-weight: 700;
@@ -134,15 +163,12 @@
     }
     .btn-primary:hover { opacity: .85; }
 
-
-    /* ── Pakete ── */
-    #pakete {
+    /* ── Hilfe / Karten ── */
+    #hilfe {
       padding: 88px 0 80px;
       border-bottom: 1px solid var(--line);
     }
-    .section-head {
-      margin-bottom: 48px;
-    }
+    .section-head { margin-bottom: 48px; }
     .section-tag {
       font-size: 11px; font-weight: 600; letter-spacing: .12em;
       text-transform: uppercase; color: var(--muted2);
@@ -153,78 +179,78 @@
       letter-spacing: -0.02em; line-height: 1.1;
     }
 
-    /* Paket cards — the signature element of this page */
+    /* the three self-diagnosis cards — the signature element */
     .paket-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       border: 1px solid var(--line);
     }
     .paket {
-      padding: 44px 40px;
-      display: flex; flex-direction: column; gap: 28px;
+      padding: 40px 32px;
+      display: flex; flex-direction: column; gap: 22px;
     }
     .paket + .paket { border-left: 1px solid var(--line); }
 
     .paket-code {
       font-size: 10px; font-weight: 700; letter-spacing: .14em;
       text-transform: uppercase; color: var(--accent);
-      display: block; margin-bottom: 14px;
+      display: block; margin-bottom: 16px;
     }
-    .paket-name {
-      font-size: clamp(20px, 2.4vw, 27px); font-weight: 700;
-      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 8px;
+    .paket-quote {
+      font-size: clamp(19px, 1.9vw, 23px); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.22;
     }
-    .paket-for {
+    .paket-fix {
       font-size: 14px; font-weight: 300;
-      color: var(--muted); line-height: 1.65;
-    }
-    .paket-list { list-style: none; flex: 1; }
-    .paket-list li {
-      font-size: 14px; font-weight: 300; color: var(--text);
-      line-height: 1.6; padding: 12px 0 12px 26px;
-      border-top: 1px solid var(--line);
-      position: relative;
-    }
-    .paket-list li::before {
-      content: '→'; position: absolute; left: 0; top: 12px;
-      color: var(--accent); font-weight: 700; font-size: 13px;
+      color: var(--muted); line-height: 1.65; flex: 1;
     }
     .paket-addon {
       font-size: 12px; font-weight: 300;
-      color: var(--muted2); line-height: 1.6;
+      color: var(--muted2); line-height: 1.5; display: block; margin-top: 3px;
     }
     .paket-foot {
-      display: flex; align-items: flex-end;
-      justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      display: flex; flex-direction: column; gap: 16px;
+      margin-top: 4px;
     }
+    .paket-priceinfo { display: flex; flex-direction: column; gap: 5px; }
     .paket-price {
-      font-size: 36px; font-weight: 700;
+      font-size: 30px; font-weight: 700;
       letter-spacing: -0.035em; line-height: 1; display: block;
     }
     .paket-price-note {
       font-size: 11px; font-weight: 300;
-      color: var(--muted2); display: block; margin-top: 7px;
+      color: var(--muted2); display: block;
     }
+    .btn-card {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      width: 100%;
+      font-family: var(--font); font-size: 13px; font-weight: 700;
+      color: #1FA855; background: transparent;
+      text-decoration: none; padding: 13px 16px;
+      border: 1px solid #25D366; cursor: pointer; transition: all .2s;
+    }
+    .btn-card:hover { background: #25D366; color: #FFFFFF; }
+    .btn-card svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 
-    @media (max-width: 760px) {
+    @media (max-width: 860px) {
       .paket-grid { grid-template-columns: 1fr; }
       .paket + .paket { border-left: none; border-top: 1px solid var(--line); }
       .paket { padding: 30px 24px; }
     }
 
-    /* ── Why ── */
+    /* ── Warum (dark, proof) ── */
     #ueber {
       background: var(--dark);
       padding: 96px 0;
       border-bottom: 1px solid rgba(236,234,229,.07);
     }
     .manifesto {
-      font-size: clamp(22px, 5.5vw, 72px);
-      font-weight: 700; line-height: 1.08;
+      font-size: clamp(24px, 5vw, 64px);
+      font-weight: 700; line-height: 1.1;
       letter-spacing: -0.03em;
       color: #ECEAE5;
       margin-bottom: 72px;
-      max-width: 800px;
+      max-width: 860px;
     }
     .manifesto em { font-style: normal; color: var(--accent); }
 
@@ -263,6 +289,27 @@
         border-bottom: 1px solid var(--line-d);
       }
       .principle:last-child { border-bottom: none; }
+    }
+
+    /* ── FAQ ── */
+    #faq { padding: 88px 0; border-bottom: 1px solid var(--line); }
+    .faq-list { border-top: 1px solid var(--line); margin-top: 40px; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+      list-style: none; cursor: pointer; padding: 22px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 24px;
+      font-size: clamp(15px, 1.8vw, 18px); font-weight: 500; letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; color: var(--accent); font-weight: 700;
+      font-size: 22px; line-height: 1; flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '\2013'; }
+    .faq-a {
+      padding: 0 0 26px; font-size: 15px; font-weight: 300;
+      color: var(--muted); line-height: 1.7; max-width: 760px;
     }
 
     /* ── Contact ── */
@@ -331,6 +378,29 @@
     #form-success strong { display: block; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
     #form-success p { font-size: 14px; font-weight: 300; color: var(--muted); }
 
+    /* ── WhatsApp + Kontakt-Alternative ── */
+    .btn-whatsapp {
+      display: flex; align-items: center; justify-content: center; gap: 11px;
+      width: 100%; padding: 18px 24px;
+      background: #25D366; color: #FFFFFF;
+      font-family: var(--font); font-size: 16px; font-weight: 700;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-whatsapp:hover { background: #1FB959; }
+    .btn-whatsapp svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+    .kontakt-alt {
+      text-align: center; margin-top: 18px;
+      font-size: 13px; font-weight: 300; color: var(--muted);
+    }
+    .kontakt-alt button {
+      background: none; border: none; font-family: var(--font);
+      font-size: 13px; font-weight: 500; color: var(--accent);
+      cursor: pointer; text-decoration: underline; padding: 0;
+    }
+    #form-wrap { margin-top: 32px; }
+    #form-wrap[hidden] { display: none; }
+
     /* ── Footer ── */
     footer {
       background: var(--dark);
@@ -342,14 +412,18 @@
       flex-wrap: wrap; gap: 10px;
       font-size: 12px; font-weight: 300; color: rgba(236,234,229,.25);
     }
-    footer a { color: rgba(236,234,229,.25); text-decoration: none; transition: color .2s; }
-    footer a:hover { color: rgba(236,234,229,.6); }
-    .foot-links { display: flex; gap: 24px; }
+    footer a, footer button {
+      color: rgba(236,234,229,.25); text-decoration: none; transition: color .2s;
+      background: none; border: none; font-family: var(--font); font-size: 12px;
+      font-weight: 300; cursor: pointer; padding: 0;
+    }
+    footer a:hover, footer button:hover { color: rgba(236,234,229,.6); }
+    .foot-links { display: flex; gap: 24px; flex-wrap: wrap; }
 
     /* ── Reveal ── */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
-  
+
     /* ── vanilla-cookieconsent theme ── */
     #cc-main {
       --cc-bg: #0D0C0B;
@@ -385,80 +459,85 @@
     <div class="nav-inner">
       <a class="logo" href="/">soforthilfe<b>.</b></a>
       <ul class="nav-links">
-        <li><a href="#pakete">Pakete</a></li>
-        <li><a href="#ueber">Warum wir</a></li>
+        <li><a href="#hilfe">Wobei wir helfen</a></li>
+        <li><a href="#faq">Fragen</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
-      <a href="#kontakt" class="btn-nav">Anfragen</a>
+      <!-- WhatsApp-Business-Nummer +4915229258748 (kommt 5x vor: Nav, Kontakt-Button, 3 Karten) -->
+      <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener" class="btn-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-  <!-- HERO: poster layout — headline top, tagline+CTA bottom, stats below -->
+  <!-- HERO: relief promise -->
   <section id="hero">
     <div class="container hero-body">
       <div class="hero-title">
-        <h1>Was Ihrem<br>Unternehmen<br>online fehlt:<br><em>wir liefern es.</em></h1>
+        <h1>Online gefunden<br>werden.<br><em>Wir helfen sofort.</em></h1>
       </div>
       <div class="hero-lower">
-        <p class="hero-tagline">Zwei Pakete, feste Preise, fertig in Tagen. Website Starter, wenn Sie noch keine Website haben. Online gefunden werden, wenn Sie eine haben und keiner sie findet.</p>
-        <a href="#pakete" class="btn-primary">Pakete ansehen</a>
+        <p class="hero-tagline">Website, Google-Eintrag und Sichtbarkeit in der KI-Suche, zum festen Preis und fertig in Tagen. Für lokale Betriebe, die online nicht gefunden werden. Kein Agentur-Kram, kein Fachchinesisch.</p>
+        <a href="#hilfe" class="btn-primary">Wobei wir helfen</a>
       </div>
     </div>
   </section>
 
-  <!-- PAKETE: two package cards -->
-  <section id="pakete">
+  <!-- HILFE: three self-diagnosis cards -->
+  <section id="hilfe">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-tag">Pakete</span>
-        <h2>Zwei Pakete. Feste Preise.</h2>
+        <span class="section-tag">Wobei wir helfen</span>
+        <h2>Was trifft auf Sie zu?</h2>
       </div>
 
       <div class="paket-grid">
 
         <div class="paket reveal">
           <div>
-            <span class="paket-code">Paket 01</span>
-            <h3 class="paket-name">Website Starter</h3>
-            <p class="paket-for">Für Betriebe, die noch keine Website haben und online endlich stattfinden wollen.</p>
+            <span class="paket-code">Google-Notfall</span>
+            <h3 class="paket-quote">&bdquo;Bei Google steht etwas Falsches über mich.&ldquo;</h3>
           </div>
-          <ul class="paket-list">
-            <li>Mobil-optimierter Onepager, individuell gestaltet, in 7 Tagen online</li>
-            <li>Hosting und Domain inklusive</li>
-            <li>Google Business Profil: Ihr Betrieb erscheint auf Google Maps</li>
-            <li>Impressum, Datenschutz und Cookie-Banner fertig eingerichtet</li>
-          </ul>
+          <p class="paket-fix">Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. In wenigen Tagen.</p>
           <div class="paket-foot">
-            <div>
-              <span class="paket-price">749 €</span>
-              <span class="paket-price-note">einmalig + 29 €/Monat für Hosting und Domain</span>
+            <div class="paket-priceinfo">
+              <span class="paket-price">ab 199 €</span>
+              <span class="paket-price-note">einmalig</span>
             </div>
-            <a href="#kontakt" class="btn-primary">Paket anfragen</a>
+            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Google-Notfall." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
           </div>
         </div>
 
         <div class="paket reveal" style="transition-delay:.08s">
           <div>
-            <span class="paket-code">Paket 02</span>
-            <h3 class="paket-name">Online gefunden werden</h3>
-            <p class="paket-for">Für Betriebe mit Website, die bei Google und in KI-Suchen trotzdem nicht auftauchen.</p>
+            <span class="paket-code">Gefunden werden</span>
+            <h3 class="paket-quote">&bdquo;Ich habe eine Seite, aber keiner findet mich.&ldquo;</h3>
           </div>
-          <ul class="paket-list">
-            <li>Google Business Profil einrichten oder optimieren</li>
-            <li>SEO-Optimierung Ihrer Website: Titel, Beschreibungen, Struktur, Schema-Markup (bis zu 5 Unterseiten)</li>
-            <li>Keyword-Recherche: 30 bis 50 Suchbegriffe mit priorisierter Umsetzungsliste</li>
-            <li>KI-Sichtbarkeit: ChatGPT, Perplexity und Google AI kennen Ihren Betrieb</li>
-          </ul>
-          <p class="paket-addon">Optional dazu: Google Ads Anschub-Kampagne, komplett eingerichtet, 399 € einmalig. Werbebudget separat.</p>
+          <p class="paket-fix">Wir optimieren Ihr Google-Profil, recherchieren die richtigen Suchbegriffe und sorgen dafür, dass Sie auftauchen, auch bei ChatGPT und in der KI-Suche.</p>
           <div class="paket-foot">
-            <div>
+            <div class="paket-priceinfo">
               <span class="paket-price">599 €</span>
-              <span class="paket-price-note">einmalig, kein Abo</span>
+              <span class="paket-price-note">einmalig</span>
+              <span class="paket-addon">Optional: Google-Ads-Anschub, 399 € einmalig (Budget separat).</span>
             </div>
-            <a href="#kontakt" class="btn-primary">Paket anfragen</a>
+            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Gefunden%20werden." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
+          </div>
+        </div>
+
+        <div class="paket reveal" style="transition-delay:.16s">
+          <div>
+            <span class="paket-code">Website</span>
+            <h3 class="paket-quote">&bdquo;Ich habe noch gar keine richtige Website.&ldquo;</h3>
+          </div>
+          <p class="paket-fix">Wir bauen Ihnen eine fertige, mobil-optimierte Website in 7 Tagen, tragen Sie bei Google ein und richten alles Rechtliche ein. Sie liefern nur Ihre Inhalte.</p>
+          <div class="paket-foot">
+            <div class="paket-priceinfo">
+              <span class="paket-price">749 €</span>
+              <span class="paket-price-note">einmalig + 29 €/Monat</span>
+              <span class="paket-addon">Monatlich kündbar, die Seite gehört Ihnen.</span>
+            </div>
+            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Website." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
           </div>
         </div>
 
@@ -466,62 +545,108 @@
     </div>
   </section>
 
-  <!-- WHY: dark, editorial — manifesto + 3 principles -->
+  <!-- WARUM: dark, proof + reassurance -->
   <section id="ueber">
     <div class="container">
       <p class="manifesto reveal">
-        Kein Stundenhonorar.<br>
-        Kein langer Vorlauf.<br>
-        <em>Kein Aufwand für Sie.</em>
+        Sie haben uns gerade<br>selbst gefunden.<br>
+        <em>Genau das machen wir für Ihren Betrieb.</em>
       </p>
       <div class="principles">
         <div class="principle reveal">
           <span class="p-tag">01</span>
           <h3>Fertig in Tagen, nicht Monaten</h3>
-          <p>Klassische Agenturen brauchen Wochen für ein Erstgespräch. Soforthilfe liefert, bevor andere anfangen.</p>
+          <p>Andere brauchen Wochen für ein Erstgespräch. Wir liefern, bevor andere anfangen.</p>
         </div>
         <div class="principle reveal" style="transition-delay:.08s">
           <span class="p-tag">02</span>
-          <h3>Fester Preis, keine Überraschungen</h3>
-          <p>Kein Stundensatz, kein Angebot das sich dreimal ändert. Ein Preis, eine Leistung, fertig.</p>
+          <h3>Fester Preis, keine Überraschung</h3>
+          <p>Kein Stundensatz, kein Angebot das sich dreimal ändert. Sie wissen vorher, was es kostet.</p>
         </div>
         <div class="principle reveal" style="transition-delay:.16s">
           <span class="p-tag">03</span>
-          <h3>Kein technisches Vorwissen nötig</h3>
-          <p>Sie liefern Ihre Inhalte. Den Rest übernehmen wir. Kein Login-Chaos, kein Tool-Dschungel.</p>
+          <h3>Sie müssen nichts können</h3>
+          <p>Sie sagen uns kurz, was klemmt. Den Rest übernehmen wir. Kein Login-Chaos, kein Tool-Dschungel.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT: clean, no sidebar clutter -->
+  <!-- FAQ: SEO + GEO engine -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Häufige Fragen</span>
+        <h2>Was Betriebe uns oft fragen</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>Warum wird mein Betrieb bei Google nicht gefunden?</summary>
+          <p class="faq-a">Meistens fehlt ein gepflegtes Google-Unternehmensprofil, oder Ihre Website ist für Google nicht verständlich aufgebaut. Wir richten das Profil ein und sorgen dafür, dass Sie bei den richtigen Suchen in Ihrer Region auftauchen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was kostet eine Website für einen kleinen Betrieb?</summary>
+          <p class="faq-a">Bei uns 749 € einmalig für eine fertige, mobil-optimierte Website, plus 29 € im Monat für Server, Domain und Pflege. Monatlich kündbar, die Seite gehört Ihnen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie lange dauert es, bis meine Website online ist?</summary>
+          <p class="faq-a">In der Regel 7 Tage. Sie liefern Ihre Inhalte, den Rest übernehmen wir.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ich habe eine Website, aber keiner findet sie. Was kann ich tun?</summary>
+          <p class="faq-a">Dann fehlt die Sichtbarkeit. Wir optimieren Ihr Google-Profil und Ihre Website, recherchieren die passenden Suchbegriffe und sorgen dafür, dass Kunden Sie finden. Das Paket Gefunden werden kostet 599 € einmalig.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Werde ich auch von ChatGPT und anderen KI-Suchen gefunden?</summary>
+          <p class="faq-a">Ja. Immer mehr Kunden fragen ChatGPT, Perplexity oder die KI-Antworten von Google nach einem Betrieb in ihrer Nähe. Wir sorgen dafür, dass diese Dienste Ihren Betrieb kennen und empfehlen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bei Google stehen falsche Angaben über mich. Können Sie das korrigieren?</summary>
+          <p class="faq-a">Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist unser Google-Notfall, ab 199 €.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bindet mich ein Vertrag oder ein Abo?</summary>
+          <p class="faq-a">Nein, kein langer Vertrag. Unsere Pakete sind Festpreise. Beim Website-Paket kommt ein monatlicher Betrag für Server und Pflege dazu, der jederzeit kündbar ist. Die Website gehört immer Ihnen.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT: WhatsApp primär, Formular als Zweitweg -->
   <section id="kontakt">
     <div class="container">
       <div class="kontakt-inner">
       <div class="kontakt-head reveal">
-        <h2>Jetzt anfragen.</h2>
-        <p>Kein Aufwand. Schreiben Sie kurz worum es geht, wir melden uns innerhalb von 24 Stunden.</p>
+        <h2>Sagen Sie uns, was klemmt.</h2>
+        <p>Am schnellsten per WhatsApp. Wir antworten persönlich, meist innerhalb weniger Stunden. Unverbindlich und kostenlos.</p>
       </div>
       <div class="reveal" style="transition-delay:.06s">
+        <!-- WhatsApp-Link mit Nummer +4915229258748 -->
+        <a id="wa-btn" class="btn-whatsapp" href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20ich%20h%C3%A4tte%20eine%20Frage." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>
+          Auf WhatsApp schreiben
+        </a>
+        <p class="kontakt-alt">Lieber per E-Mail? <button type="button" id="show-form">Formular anzeigen</button></p>
+        <div id="form-wrap" hidden>
         <form class="cta-form" id="contact-form" novalidate>
           <div class="form-row">
             <input class="f-input" type="text" name="name" placeholder="Ihr Name" required autocomplete="name">
             <input class="f-input" type="text" name="company" placeholder="Unternehmen" autocomplete="organization">
           </div>
           <input class="f-input" type="email" name="email" placeholder="E-Mail-Adresse" required autocomplete="email">
-          <p class="f-label">Worum geht es?</p>
-          <div class="f-multiselect" role="group" aria-label="Worum geht es?">
+          <p class="f-label">Was trifft auf Sie zu?</p>
+          <div class="f-multiselect" role="group" aria-label="Was trifft auf Sie zu?">
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="website-starter">
-              Website Starter
+              <input type="checkbox" name="interest" value="google-notfall">
+              Google-Notfall
             </label>
             <label class="f-chip">
               <input type="checkbox" name="interest" value="gefunden-werden">
-              Online gefunden werden
+              Gefunden werden
             </label>
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="google-ads-addon">
-              Google Ads Add-on
+              <input type="checkbox" name="interest" value="website">
+              Website
             </label>
             <label class="f-chip">
               <input type="checkbox" name="interest" value="anderes">
@@ -542,6 +667,7 @@
           <div class="check">✓</div>
           <strong>Danke, wir melden uns!</strong>
           <p>Wir melden uns innerhalb von 24 Stunden.</p>
+        </div>
         </div>
       </div>
       </div>
@@ -624,7 +750,7 @@
     });
   })();
 
-document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var t = document.querySelector(a.getAttribute('href'));
       if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 68, behavior: 'smooth' }); }
@@ -648,6 +774,15 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     });
   });
 
+  // Formular als Zweitweg einblenden
+  var showForm = document.getElementById('show-form');
+  if (showForm) {
+    showForm.addEventListener('click', function() {
+      document.getElementById('form-wrap').hidden = false;
+      showForm.parentElement.style.display = 'none';
+    });
+  }
+
   document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     if (!this.querySelector('[name=privacy]').checked || !this.querySelector('[name=email]').value) return;
@@ -664,7 +799,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     } catch {
       btn.disabled = false;
       btn.textContent = 'Kostenlos anfragen';
-      alert('Fehler beim Senden. Bitte versuche es erneut oder schreib uns direkt.');
+      alert('Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt.');
     }
   });
 </script>

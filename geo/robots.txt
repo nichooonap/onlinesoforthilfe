@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://geo.onlinesoforthilfe.de/sitemap.xml

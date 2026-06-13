@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://googleads.onlinesoforthilfe.de/sitemap.xml

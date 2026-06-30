@@ -58,9 +58,10 @@
       "@type": "OfferCatalog",
       "name": "Festpreis-Pakete",
       "itemListElement": [
-        { "@type": "Offer", "name": "Google-Notfall", "description": "Google-Unternehmensprofil übernehmen, falsche Angaben korrigieren, Bewertungen in Ordnung bringen.", "price": "199", "priceCurrency": "EUR" },
-        { "@type": "Offer", "name": "Gefunden werden", "description": "Google-Unternehmensprofil optimieren, lokale Suchbegriffe, Sichtbarkeit in ChatGPT und KI-Suche.", "price": "599", "priceCurrency": "EUR" },
-        { "@type": "Offer", "name": "Website", "description": "Mobil-optimierte Website in 7 Tagen, bei Google eingetragen, rechtssicher.", "price": "749", "priceCurrency": "EUR" }
+        { "@type": "Offer", "name": "Gefunden werden", "description": "Google-Unternehmensprofil optimieren, lokale Suchbegriffe, Sichtbarkeit in Google- und KI-Suche (ChatGPT und Co.).", "price": "599", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Website", "description": "Mobil-optimierte Website in 7 Tagen, bei Google eingetragen, rechtssicher.", "price": "749", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Google-Eintrag in Ordnung bringen", "description": "Google-Unternehmensprofil übernehmen, falsche Angaben korrigieren, Bewertungen in Ordnung bringen. Die kleinste Stufe von Gefunden werden.", "price": "199", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Google-Anzeigen (Anschub)", "description": "Werbeanzeigen-Kampagne, damit Ihr Betrieb sofort oben steht. Werbebudget separat.", "price": "399", "priceCurrency": "EUR" }
       ]
     }
   }
@@ -76,7 +77,7 @@
       { "@type": "Question", "name": "Wie lange dauert es, bis meine Website online ist?", "acceptedAnswer": { "@type": "Answer", "text": "In der Regel 7 Tage. Sie liefern Ihre Inhalte, den Rest übernehmen wir." } },
       { "@type": "Question", "name": "Ich habe eine Website, aber keiner findet sie. Was kann ich tun?", "acceptedAnswer": { "@type": "Answer", "text": "Dann fehlt die Sichtbarkeit. Wir optimieren Ihr Google-Profil und Ihre Website, recherchieren die passenden Suchbegriffe und sorgen dafür, dass Kunden Sie finden. Das Paket Gefunden werden kostet 599 Euro einmalig." } },
       { "@type": "Question", "name": "Werde ich auch von ChatGPT und anderen KI-Suchen gefunden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Immer mehr Kunden fragen ChatGPT, Perplexity oder die KI-Antworten von Google nach einem Betrieb in ihrer Nähe. Wir sorgen dafür, dass diese Dienste Ihren Betrieb kennen und empfehlen." } },
-      { "@type": "Question", "name": "Bei Google stehen falsche Angaben über mich. Können Sie das korrigieren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist unser Google-Notfall, ab 199 Euro." } },
+      { "@type": "Question", "name": "Bei Google stehen falsche Angaben über mich. Können Sie das korrigieren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist die kleinste Stufe von Gefunden werden, ab 199 Euro." } },
       { "@type": "Question", "name": "Bindet mich ein Vertrag oder ein Abo?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, kein langer Vertrag. Unsere Pakete sind Festpreise. Beim Website-Paket kommt ein monatlicher Betrag für Server und Pflege dazu, der jederzeit kündbar ist. Die Website gehört immer Ihnen." } }
     ]
   }
@@ -192,6 +193,10 @@
       border-bottom: 1px solid var(--line);
     }
     .section-head { margin-bottom: 48px; }
+    .section-head p {
+      font-size: 15px; font-weight: 300; color: var(--muted);
+      line-height: 1.7; margin-top: 14px; max-width: 520px;
+    }
     .section-tag {
       font-size: 11px; font-weight: 600; letter-spacing: .12em;
       text-transform: uppercase; color: var(--muted2);
@@ -205,7 +210,7 @@
     /* the three self-diagnosis cards — the signature element */
     .paket-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       border: 1px solid var(--line);
     }
     .paket {
@@ -226,6 +231,18 @@
     .paket-fix {
       font-size: 14px; font-weight: 300;
       color: var(--muted); line-height: 1.65; flex: 1;
+    }
+    .paket-list {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+      flex: 1; margin: 2px 0 4px;
+    }
+    .paket-list li {
+      font-size: 14px; font-weight: 300; color: var(--text);
+      line-height: 1.5; padding-left: 24px; position: relative;
+    }
+    .paket-list li::before {
+      content: '✓'; position: absolute; left: 0; top: 0;
+      color: var(--accent); font-weight: 700; font-size: 13px;
     }
     .paket-addon {
       font-size: 12px; font-weight: 300;
@@ -501,66 +518,62 @@
         <h1>Online gefunden<br>werden.<br><em>Wir helfen sofort.</em></h1>
       </div>
       <div class="hero-lower">
-        <p class="hero-tagline">Website, Google-Eintrag und Sichtbarkeit in der KI-Suche, zum festen Preis und fertig in Tagen. Für lokale Betriebe, die online nicht gefunden werden. Kein Agentur-Kram, kein Fachchinesisch.</p>
+        <p class="hero-tagline">Für lokale Betriebe, die online nicht gefunden werden. Wir machen Sie bei Google und in der KI-Suche sichtbar oder bauen Ihre Website neu. Zum festen Preis, fertig in Tagen. Kein Agentur-Kram, kein Fachchinesisch.</p>
         <a href="#hilfe" class="btn-primary">Wobei wir helfen</a>
       </div>
     </div>
   </section>
 
-  <!-- HILFE: three self-diagnosis cards -->
+  <!-- HILFE: two self-diagnosis situations -->
   <section id="hilfe">
     <div class="container">
       <div class="section-head reveal">
         <span class="section-tag">Wobei wir helfen</span>
         <h2>Was trifft auf Sie zu?</h2>
+        <p>Bei lokalen Betrieben ist es fast immer eine von zwei Situationen. Sagen Sie uns, welche, den Rest übernehmen wir.</p>
       </div>
 
       <div class="paket-grid">
 
         <div class="paket reveal">
           <div>
-            <span class="paket-code">Google-Notfall</span>
-            <h3 class="paket-quote">&bdquo;Bei Google steht etwas Falsches über mich.&ldquo;</h3>
+            <span class="paket-code">Situation 1</span>
+            <h3 class="paket-quote">&bdquo;Keiner findet mich.&ldquo;</h3>
           </div>
-          <p class="paket-fix">Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. In wenigen Tagen.</p>
+          <p class="paket-fix">Sie sind da, aber bei Google und ChatGPT taucht Ihr Betrieb nicht auf. Wir sorgen dafür, dass Kunden Sie finden.</p>
+          <ul class="paket-list">
+            <li>Google-Eintrag richtig eingerichtet und optimiert</li>
+            <li>Die richtigen Suchbegriffe für Ihre Region</li>
+            <li>Sichtbar bei Google und in der KI-Suche (ChatGPT &amp; Co.)</li>
+          </ul>
           <div class="paket-foot">
             <div class="paket-priceinfo">
-              <span class="paket-price">ab 199 €</span>
+              <span class="paket-price">599 €</span>
               <span class="paket-price-note">einmalig</span>
+              <span class="paket-addon">Nur den Google-Eintrag aufräumen? Ab 199 €. &middot; Sofort oben mit Anzeigen? +399 € (plus Werbebudget).</span>
             </div>
-            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Google-Notfall." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
+            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20bei%20mir%20trifft%20zu%3A%20Keiner%20findet%20mich." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
           </div>
         </div>
 
         <div class="paket reveal" style="transition-delay:.08s">
           <div>
-            <span class="paket-code">Gefunden werden</span>
-            <h3 class="paket-quote">&bdquo;Ich habe eine Seite, aber keiner findet mich.&ldquo;</h3>
+            <span class="paket-code">Situation 2</span>
+            <h3 class="paket-quote">&bdquo;Ich hab keine richtige Seite.&ldquo;</h3>
           </div>
-          <p class="paket-fix">Wir optimieren Ihr Google-Profil, recherchieren die richtigen Suchbegriffe und sorgen dafür, dass Sie auftauchen, auch bei ChatGPT und in der KI-Suche.</p>
-          <div class="paket-foot">
-            <div class="paket-priceinfo">
-              <span class="paket-price">599 €</span>
-              <span class="paket-price-note">einmalig</span>
-              <span class="paket-addon">Optional: Google-Ads-Anschub, 399 € einmalig (Budget separat).</span>
-            </div>
-            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Gefunden%20werden." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
-          </div>
-        </div>
-
-        <div class="paket reveal" style="transition-delay:.16s">
-          <div>
-            <span class="paket-code">Website</span>
-            <h3 class="paket-quote">&bdquo;Ich habe noch gar keine richtige Website.&ldquo;</h3>
-          </div>
-          <p class="paket-fix">Wir bauen Ihnen eine fertige, mobil-optimierte Website in 7 Tagen, tragen Sie bei Google ein und richten alles Rechtliche ein. Sie liefern nur Ihre Inhalte.</p>
+          <p class="paket-fix">Gar keine Website oder eine, die nichts hermacht. Wir bauen Ihnen eine neue, von Anfang an so, dass Kunden Sie finden.</p>
+          <ul class="paket-list">
+            <li>Fertige Website in 7 Tagen, mobil-optimiert</li>
+            <li>Bei Google eingetragen und auffindbar</li>
+            <li>Sie liefern nur Ihre Inhalte, den Rest machen wir</li>
+          </ul>
           <div class="paket-foot">
             <div class="paket-priceinfo">
               <span class="paket-price">749 €</span>
               <span class="paket-price-note">einmalig + 29 €/Monat</span>
               <span class="paket-addon">Monatlich kündbar, die Seite gehört Ihnen.</span>
             </div>
-            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20es%20geht%20um%3A%20Website." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
+            <a href="https://wa.me/4915229258748?text=Hallo%20Soforthilfe%2C%20bei%20mir%20trifft%20zu%3A%20Ich%20brauch%20eine%20Website." target="_blank" rel="noopener" class="btn-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.943c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.359 11.944-11.943a11.86 11.86 0 00-3.418-8.402z"/></svg>Anfragen</a>
           </div>
         </div>
 
@@ -625,7 +638,7 @@
         </details>
         <details class="faq-item">
           <summary>Bei Google stehen falsche Angaben über mich. Können Sie das korrigieren?</summary>
-          <p class="faq-a">Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist unser Google-Notfall, ab 199 €. <a href="/blog/falsche-oeffnungszeiten-google-korrigieren/" style="color:var(--accent);text-decoration:underline;">So korrigieren Sie Ihren Eintrag.</a></p>
+          <p class="faq-a">Ja. Wir übernehmen Ihren Google-Eintrag, korrigieren falsche Öffnungszeiten oder Adressen und bringen Ihre Bewertungen in Ordnung. Das ist die kleinste Stufe von Gefunden werden, ab 199 €. <a href="/blog/falsche-oeffnungszeiten-google-korrigieren/" style="color:var(--accent);text-decoration:underline;">So korrigieren Sie Ihren Eintrag.</a></p>
         </details>
         <details class="faq-item">
           <summary>Bindet mich ein Vertrag oder ein Abo?</summary>
@@ -660,16 +673,12 @@
           <p class="f-label">Was trifft auf Sie zu?</p>
           <div class="f-multiselect" role="group" aria-label="Was trifft auf Sie zu?">
             <label class="f-chip">
-              <input type="checkbox" name="interest" value="google-notfall">
-              Google-Notfall
-            </label>
-            <label class="f-chip">
-              <input type="checkbox" name="interest" value="gefunden-werden">
-              Gefunden werden
+              <input type="checkbox" name="interest" value="keiner-findet-mich">
+              Keiner findet mich
             </label>
             <label class="f-chip">
               <input type="checkbox" name="interest" value="website">
-              Website
+              Ich brauch eine Website
             </label>
             <label class="f-chip">
               <input type="checkbox" name="interest" value="anderes">

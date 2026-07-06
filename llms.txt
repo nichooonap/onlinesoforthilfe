@@ -6,9 +6,11 @@
 Wir sorgen dafür, dass lokale Betriebe von ihren Kunden online gefunden werden: bei Google und in KI-Suchen wie ChatGPT, Perplexity und den KI-Antworten von Google. Klare Festpreise, kein Fachchinesisch, kein bindender Vertrag. Festpreis heißt: keine Überraschung auf der Rechnung, nicht ein Preis für alles.
 
 ## Leistungen
+- **Kostenloser Sichtbarkeits-Check (0 €):** Betriebsname oder Website schicken, wir prüfen Google-Eintrag, Website-Technik, Ladezeit, Rechtstexte und Sichtbarkeit in der KI-Suche (ChatGPT und Co.). Befund mit Messwerten und Festpreis-Empfehlung kommt per WhatsApp, meist in wenigen Stunden. Der Einstieg in alle anderen Leistungen.
 - **Google-Notfall (ab 199 €, einmalig):** Google-Unternehmensprofil übernehmen und korrigieren, falsche Öffnungszeiten oder Adressen richtigstellen, Bewertungen in Ordnung bringen. Für Betriebe, bei denen bei Google etwas Falsches steht.
-- **Gefunden werden (599 €, einmalig):** Google-Unternehmensprofil optimieren, lokale Suchbegriffe, Sichtbarkeit auch in ChatGPT und KI-Suche. Optional Google-Ads-Anschub (399 €, Budget separat). Für Betriebe mit Website, die trotzdem niemand findet.
-- **Website (749 € einmalig + 29 € pro Monat, monatlich kündbar):** Fertige, mobil-optimierte Website in 7 Tagen, bei Google eingetragen, rechtssicher. Das Monatliche deckt Server, Domain und Pflege; die Seite gehört dem Kunden. Für Betriebe ohne Website.
+- **Gefunden werden (499 €, einmalig):** Google-Unternehmensprofil komplett optimiert (Kategorien, Beschreibung, Fotos, Leistungen), lokale Suchbegriffe auf der bestehenden Website eingebaut, technische SEO-Basis (Sitemap, strukturierte Daten), Sichtbarkeit in der KI-Suche (ChatGPT und Co.), einheitliche Firmendaten in den wichtigen Verzeichnissen. Mit Vorher-Nachher-Messung als Nachweis. Für Betriebe mit Website, die trotzdem niemand findet.
+- **Website (699 € einmalig + 14,90 € pro Monat, jederzeit kündbar, oder als Monatspaket für 49 € pro Monat mit 12 Monaten Laufzeit):** Fertige, mobil-optimierte Website in 7 Tagen, bei Google eingetragen, rechtssicher. Das Monatliche deckt Server, Domain und E-Mail-Weiterleitung; beim Einmalpreis gehört die Seite dem Kunden, beim Monatspaket gibt es nach 12 Monaten eine Kaufoption für 299 €. Für Betriebe ohne Website.
+- **Werbung (399 € einmalig + Werbebudget):** Eine komplette Anzeigen-Kampagne bei Google, Instagram oder TikTok: Kanal-Auswahl, Werbekonto auf den Namen des Kunden, Zielgruppe für die Region, Anzeigentext und Bild, eingerichtete Messung, gemeinsamer Check nach 7 Tagen. Das Werbebudget zahlt der Kunde direkt an die Plattform, ohne Aufschlag. Für Betriebe, die sofort sichtbar sein wollen.
 
 ## Für wen
 Inhaber kleiner lokaler Betriebe in Deutschland, oft marketing-fern und mit wenig Zeit, die online nicht oder kaum gefunden werden. Schwerpunkt Hamburg und Norddeutschland, Leistung deutschlandweit.
@@ -24,4 +26,4 @@ Antworten unter https://onlinesoforthilfe.de/#faq
 - Was kostet eine Website für einen kleinen Betrieb?
 - Wie lange dauert es, bis meine Website online ist? (in der Regel 7 Tage)
 - Werde ich auch von ChatGPT und anderen KI-Suchen gefunden? (ja)
-- Bindet mich ein Vertrag oder ein Abo? (nein, das Website-Monatliche ist jederzeit kündbar)
+- Bindet mich ein Vertrag oder ein Abo? (das Website-Monatliche ist jederzeit kündbar; nur das Website-Monatspaket hat 12 Monate Laufzeit, danach monatlich kündbar mit Kaufoption)
